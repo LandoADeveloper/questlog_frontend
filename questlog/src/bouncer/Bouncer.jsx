@@ -3,7 +3,6 @@ import { Outlet, useNavigate } from "react-router-dom";
 
 const Bouncer = () => {
 
-    const [allowed, setAllowed] = useState()
     const [verified, setVerified] = useState(false)
     const navigate = useNavigate()
 
@@ -16,11 +15,8 @@ const Bouncer = () => {
             })
             setVerified(true)
             if(!response.ok) {
-                setAllowed(false)
                 navigate('/')
-            } else {
-                setAllowed(true)
-            }
+            } 
         }
         verify()
     },[])
