@@ -7,6 +7,7 @@ import Login from './pages/login/Login'
 import Register from './pages/register/Register'
 import Dashboard from './pages/dashboard/Dashboard'
 import Bouncer from './bouncer/Bouncer'
+import QuestCreator from './pages/questCreator/QuestCreator'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
         <Route path='/register' element= {<Register/>}/>
         <Route element={<Bouncer/>}>
           <Route path='/dashboard' element= {<Dashboard/>}/>
+          <Route path='/createQuest' element= {<QuestCreator/>} />
         </Route>
       </Routes>
     </BrowserRouter>
